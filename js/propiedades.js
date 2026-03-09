@@ -54,7 +54,7 @@ async function loadPropiedades() {
     const data = await response.json();
 
     const activas = data.filter(
-      p => String(p["Activo (si/no)"]).toLowerCase() === "si"
+      p => String(p["activo (si/no)"]).toLowerCase() === "si"
     );
 
     if (activas.length === 0) {
@@ -69,24 +69,24 @@ async function loadPropiedades() {
       // Primera foto disponible
       let fotoSrc = 'img/sin-imagen.png';
       for (let i = 1; i <= 8; i++) {
-        const url = prop[`Foto ${i}`];
+        const url = prop[`foto ${i}`];
         if (url && url.trim() !== '') {
           const normalizada = normalizarFoto(url);
           if (normalizada) { fotoSrc = normalizada; break; }
         }
       }
 
-      const codigo  = prop["CÓDIGO"] || "";
-      const titulo  = prop["Título"] || "Sin título";
-      const ciudad  = prop["Ciudad"] || "";
-      const barrio  = prop["Barrio/Sector"] || "";
-      const tipo    = prop["Tipo"] || "";
-      const area    = prop["Área m2"] || "0";
-      const hab     = prop["Habitaciones"] || "0";
-      const banos   = prop["Baños"] || "0";
-      const estado  = prop["Estado"] || "";
-      const pVenta  = prop["Precio Venta COP"] || "";
-      const pArriendo = prop["Precio Arriendo COP"] || "";
+      const codigo  = prop["codigo"] || "";
+      const titulo  = prop["titulo"] || "Sin título";
+      const ciudad  = prop["ciudad"] || "";
+      const barrio  = prop["barrio/sector"] || "";
+      const tipo    = prop["tipo"] || "";
+      const area    = prop["area m2"] || "0";
+      const hab     = prop["habitaciones"] || "0";
+      const banos   = prop["banos"] || "0";
+      const estado  = prop["estado"] || "";
+      const pVenta  = prop["precio venta cop"] || "";
+      const pArriendo = prop["precio arriendo cop"] || "";
 
       // Precio a mostrar
       let precio = "Consultar";
