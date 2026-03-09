@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propiedades - Portal33</title>
+  <meta name="description" content="Explora nuestro catálogo de propiedades en venta y arriendo en la zona norte de Bogotá.">
+  <meta property="og:title" content="Propiedades - Portal33">
+  <meta property="og:description" content="Encuentra tu propiedad ideal en la zona norte de Bogotá.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER cargado dinámicamente desde modules/header.html -->
+  <div id="header-container"></div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <section id="propiedades">
+    <div class="container">
+      <h2>Propiedades disponibles</h2>
+
+      <!-- INDICADOR DE CARGA -->
+      <div id="loadingPropiedades" class="loading-box" role="status"
+           aria-live="polite" style="display:none;">
+        <h2>Cargando propiedades…</h2>
+      </div>
+
+      <!-- GRID DE CARDS -->
+      <div class="prop-grid" id="propiedadesGrid"></div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER cargado dinámicamente desde modules/footer.html -->
+  <div id="footer-container"></div>
+
+  <!-- =======================================
+       SCRIPTS
+       Orden requerido:
+       1. header-loader  → inyecta HTML del header
+       2. header.js      → enlace activo + submódulos
+       3. footer-loader  → inyecta HTML del footer
+       4. menu-mobile    → menú responsive
+       5. config.js      → endpoints centralizados
+       6. propiedades.js → carga y renderiza cards
+  ======================================= -->
+  <script src="js/header-loader.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/footer-loader.js"></script>
+  <script src="js/menu-mobile.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/propiedades.js"></script>
+
+</body>
+</html>

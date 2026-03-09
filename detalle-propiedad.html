@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de Propiedad - Portal33</title>
+  <meta name="description" content="Detalle completo de la propiedad con fotos, características y precios.">
+  <meta property="og:title" content="Detalle de Propiedad - Portal33">
+  <meta property="og:description" content="Información completa de la propiedad en Portal33.">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER cargado dinámicamente desde modules/header.html -->
+  <div id="header-container"></div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="detalle-container" id="detalleContainer">
+
+    <nav class="breadcrumb">
+      <a href="index.html">Inicio</a> &gt;
+      <a href="propiedades.html">Propiedades</a> &gt;
+      <span>Detalle</span>
+    </nav>
+
+    <a href="propiedades.html" class="btn-volver">← Volver al listado</a>
+
+    <!-- Indicador de carga -->
+    <div class="mensaje-carga" id="mensajeCarga">
+      <h2>Cargando información de la propiedad...</h2>
+      <div class="loading-box"
+           style="position:static; transform:none; margin:20px auto;"></div>
+    </div>
+
+    <!-- Contenido (se llena con JS) -->
+    <div id="contenidoPropiedad" style="display:none;">
+
+      <!-- Galería -->
+      <section class="galeria-section">
+        <div class="foto-principal" id="fotoPrincipal">
+          <img src="" alt="Foto principal de la propiedad" id="imgPrincipal">
+        </div>
+        <div class="thumbnails" id="thumbnailsContainer"></div>
+      </section>
+
+      <!-- Grid de información -->
+      <div class="info-grid">
+
+        <div class="info-principal">
+          <h1 id="propTitulo"></h1>
+          <div class="ubicacion">
+            <span>📍</span>
+            <span id="propUbicacion"></span>
+          </div>
+          <div class="tipo-badge" id="propTipo"></div>
+
+          <div class="caracteristicas">
+            <div class="caracteristica-item">
+              <span class="icono">📐</span>
+              <span class="valor" id="propArea">0</span>
+              <span class="label">m² Área</span>
+            </div>
+            <div class="caracteristica-item">
+              <span class="icono">🛏️</span>
+              <span class="valor" id="propHabitaciones">0</span>
+              <span class="label">Habitaciones</span>
+            </div>
+            <div class="caracteristica-item">
+              <span class="icono">🚿</span>
+              <span class="valor" id="propBanos">0</span>
+              <span class="label">Baños</span>
+            </div>
+            <div class="caracteristica-item">
+              <span class="icono">🚗</span>
+              <span class="valor" id="propParqueaderos">0</span>
+              <span class="label">Parqueaderos</span>
+            </div>
+          </div>
+
+          <div class="descripcion-section">
+            <h3>Descripción</h3>
+            <p id="propDescripcion"></p>
+          </div>
+        </div>
+
+        <!-- Sidebar de contacto -->
+        <div class="sidebar-contacto">
+          <div class="precio-principal" id="propPrecioVenta"></div>
+          <span class="precio-label" id="propEstadoVenta"></span>
+
+          <div class="precio-secundario" id="precioArriendoBox" style="display:none;">
+            <span class="label">Precio de arriendo</span>
+            <span class="valor" id="propPrecioArriendo"></span>
+          </div>
+
+          <div class="detalle-extra">
+            <div class="detalle-extra-item">
+              <span class="label">Estrato:</span>
+              <span class="valor" id="propEstrato">-</span>
+            </div>
+            <div class="detalle-extra-item">
+              <span class="label">Administración:</span>
+              <span class="valor" id="propAdministracion">-</span>
+            </div>
+            <div class="detalle-extra-item">
+              <span class="label">Clasificación:</span>
+              <span class="valor" id="propClasificacion">-</span>
+            </div>
+          </div>
+
+          <button class="btn-whatsapp" id="btnWhatsapp">
+            <span style="font-size:1.5rem;">📱</span>
+            Contactar por WhatsApp
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER cargado dinámicamente desde modules/footer.html -->
+  <div id="footer-container"></div>
+
+  <!-- =======================================
+       SCRIPTS
+       Orden requerido:
+       1. header-loader       → inyecta HTML del header
+       2. header.js           → enlace activo + submódulos
+       3. footer-loader       → inyecta HTML del footer
+       4. menu-mobile         → menú responsive
+       5. config.js           → endpoints centralizados
+       6. detalle-propiedad.js → carga y renderiza detalle
+  ======================================= -->
+  <script src="js/header-loader.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/footer-loader.js"></script>
+  <script src="js/menu-mobile.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/detalle-propiedad.js"></script>
+
+</body>
+</html>
