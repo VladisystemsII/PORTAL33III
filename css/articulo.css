@@ -1,49 +1,213 @@
-/* articulo.css — Estilos específicos del módulo de detalle de artículo */
+main {
+  padding: 40px 20px;
+}
 
 .article-container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 20px;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 48px 56px;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  display: none; /* Se muestra después de cargar via JS */
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .article-container {
+    padding: 28px 20px;
+  }
+}
+
+
+
+/* articulo.css — Estilos del módulo artículo de Portal33 */
+
+.article-container {
+  display: none; /* el JS lo muestra cuando carga */
 }
 
 .article-title {
-  font-size: 2em;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
   margin-bottom: 10px;
-  color: #2c3e50;
 }
 
 .article-date {
-  font-size: 0.9em;
-  color: #7f8c8d;
-  margin-bottom: 20px;
+  font-size: 0.82rem;
+  color: #999;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.article-resumen {
+  font-size: 1.05rem;
+  color: #555;
+  font-style: italic;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.article-divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 0 0 36px 0;
 }
 
 .article-content {
-  font-size: 1.1em;
-  line-height: 1.6;
-  color: #34495e;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.85;
 }
 
-/* Botón volver — fijo en esquina inferior derecha */
-.btn-volver {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #007BFF; /* corregido: era #d9dcde (invisible) */
-  color: #fff;
+/* Markdown renderizado */
+.article-content h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111;
+  margin: 36px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.article-content h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #222;
+  margin: 28px 0 10px;
+}
+
+.article-content p {
+  margin-bottom: 18px;
+}
+
+.article-content strong {
+  color: #111;
+  font-weight: 600;
+}
+
+.article-content em {
+  color: #555;
+}
+
+.article-content ul,
+.article-content ol {
+  margin: 0 0 18px 24px;
+  line-height: 1.85;
+}
+
+.article-content li {
+  margin-bottom: 6px;
+}
+
+.article-content blockquote {
+  border-left: 3px solid #ccc;
+  margin: 24px 0;
   padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  transition: background-color 0.3s ease;
+  color: #666;
+  font-style: italic;
+  background: #f9f9f9;
 }
 
-.btn-volver:hover {
-  background-color: #0056b3;
+.article-content hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 32px 0;
+}
+
+/* articulo.css — Estilos del módulo artículo de Portal33 */
+
+.article-container {
+  display: none; /* el JS lo muestra cuando carga */
+}
+
+.article-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #111;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.article-date {
+  font-size: 0.82rem;
+  color: #999;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.article-resumen {
+  font-size: 1.05rem;
+  color: #555;
+  font-style: italic;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.article-divider {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 0 0 36px 0;
+}
+
+.article-content {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.85;
+}
+
+/* Markdown renderizado */
+.article-content h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #111;
+  margin: 36px 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.article-content h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #222;
+  margin: 28px 0 10px;
+}
+
+.article-content p {
+  margin-bottom: 18px;
+}
+
+.article-content strong {
+  color: #111;
+  font-weight: 600;
+}
+
+.article-content em {
+  color: #555;
+}
+
+.article-content ul,
+.article-content ol {
+  margin: 0 0 18px 24px;
+  line-height: 1.85;
+}
+
+.article-content li {
+  margin-bottom: 6px;
+}
+
+.article-content blockquote {
+  border-left: 3px solid #ccc;
+  margin: 24px 0;
+  padding: 12px 20px;
+  color: #666;
+  font-style: italic;
+  background: #f9f9f9;
+}
+
+.article-content hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 32px 0;
 }

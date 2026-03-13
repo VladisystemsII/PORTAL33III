@@ -49,7 +49,7 @@ async function loadBlogs() {
 
       const row = document.createElement("tr");
       row.innerHTML = `
-        <td>${sanitize(post["Titulo"])}</td>
+        <td>${sanitize(post["Título"] || post["Titulo"] || "")}</td>
         <td>${sanitize(fechaFormateada)}</td>
         <td>${sanitize(post["Resumen"])}</td>
         <td>
