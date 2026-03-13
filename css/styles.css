@@ -656,6 +656,12 @@ h1.blog-title {
   background: transparent;
 }
 
+#blogTable td:first-child {
+  font-weight: 700;
+  color: var(--color-dark);
+  font-size: 1rem;
+}
+
 .blog-container {
   min-height: calc(100vh - var(--header-height));
 }
